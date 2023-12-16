@@ -5,6 +5,7 @@ import com.kotlindiscord.kord.extensions.commands.converters.impl.int
 import com.kotlindiscord.kord.extensions.extensions.Extension
 import com.kotlindiscord.kord.extensions.extensions.ephemeralSlashCommand
 import com.kotlindiscord.kord.extensions.extensions.publicSlashCommand
+import kotlinx.coroutines.flow.first
 
 class PurgeExtension : Extension() {
     override val name = "purge"
