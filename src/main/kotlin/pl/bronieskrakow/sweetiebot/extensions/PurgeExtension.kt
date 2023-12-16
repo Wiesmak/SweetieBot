@@ -3,7 +3,6 @@ package pl.bronieskrakow.sweetiebot.extensions
 import com.kotlindiscord.kord.extensions.commands.Arguments
 import com.kotlindiscord.kord.extensions.commands.converters.impl.int
 import com.kotlindiscord.kord.extensions.extensions.Extension
-import com.kotlindiscord.kord.extensions.extensions.ephemeralSlashCommand
 import com.kotlindiscord.kord.extensions.extensions.publicSlashCommand
 import kotlinx.coroutines.flow.first
 
@@ -28,7 +27,6 @@ class PurgeExtension : Extension() {
                 messages.collect { it.delete() }
                 respond {
                     content = "<:1185625937010766016:1185625937010766016>"
-                    ephemeral
                 }
             }
 
