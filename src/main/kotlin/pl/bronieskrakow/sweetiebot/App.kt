@@ -13,6 +13,7 @@ suspend fun main() {
     val bot = ExtensibleBot(TOKEN) {
         extensions {
             add(::BoopExtension)
+            add(::ResponseExtension)
         }
 
         presence {
