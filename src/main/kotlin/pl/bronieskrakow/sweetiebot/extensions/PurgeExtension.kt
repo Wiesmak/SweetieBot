@@ -14,13 +14,13 @@ class PurgeExtension : Extension() {
     override suspend fun setup() {
         publicSlashCommand(::PurgeArgs) {
             name = "purge"
-            description = "Mass delete messages from channel"
+            description = "Masowo usuń wiadomości z kanału"
 
             action {
                 val ammount = arguments.ammount
                 if (ammount > 100) {
                     respond {
-                        content = "You can't purge more than 100 messages at once!"
+                        content = "Nie możesz usunąć więcej niż 100 wiadomości na raz!"
                         ephemeral
                     }
                     return@action
@@ -39,7 +39,7 @@ class PurgeExtension : Extension() {
     inner class PurgeArgs : Arguments() {
         val ammount by int {
             name = "ammount"
-            description = "Ammount of messages to purge"
+            description = "Liczba wiadomości do usunięcia"
         }
     }
 }
