@@ -2,7 +2,6 @@ package pl.bronieskrakow.sweetiebot.extensions
 
 import com.kotlindiscord.kord.extensions.extensions.Extension
 import com.kotlindiscord.kord.extensions.extensions.event
-import com.kotlindiscord.kord.extensions.utils.respond
 import dev.kord.core.event.message.MessageCreateEvent
 
 class ResponseExtension : Extension() {
