@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.21"
     application
+    id("org.graalvm.buildtools.native") version "0.9.28"
 }
 
 group = "pl.bronieskrakow"
@@ -9,6 +10,12 @@ version = "1.0-SNAPSHOT"
 repositories {
     google()
     mavenCentral()
+    repositories {
+        maven {
+            url = uri("https://raw.githubusercontent.com/graalvm/native-build-tools/snapshots")
+        }
+        gradlePluginPortal()
+    }
 
     maven {
         name = "Sonatype Snapshots (Legacy)"

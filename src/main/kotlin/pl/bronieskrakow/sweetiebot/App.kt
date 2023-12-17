@@ -2,11 +2,7 @@ package pl.bronieskrakow.sweetiebot
 
 import com.kotlindiscord.kord.extensions.ExtensibleBot
 import com.kotlindiscord.kord.extensions.utils.env
-
-import pl.bronieskrakow.sweetiebot.extensions.BoopExtension
-import pl.bronieskrakow.sweetiebot.extensions.EventExtension
-import pl.bronieskrakow.sweetiebot.extensions.PurgeExtension
-import pl.bronieskrakow.sweetiebot.extensions.ResponseExtension
+import pl.bronieskrakow.sweetiebot.extensions.*
 
 private val TOKEN = env("TOKEN")
 
@@ -17,6 +13,7 @@ suspend fun main() {
             add(::PurgeExtension)
             add(::ResponseExtension)
             add(::EventExtension)
+            add(::SelectExtension)
         }
 
         presence {

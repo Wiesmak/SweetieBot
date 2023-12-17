@@ -1,0 +1,71 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SweetieBot.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SweetieBot_main_jar</output-path>
+    <root id="archive" name="SweetieBot.main.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="SweetieBot.main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-websocket-serialization-jvm/2.3.6/9854724b2452f006ee3294da97a30658bf155747/ktor-websocket-serialization-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.9.20/e2b4d1f475ae0606d063a84fce4dccdb45c7e12a/kotlin-stdlib-jdk8-1.9.20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.kord/kord-rest-jvm/0.13.0-SNAPSHOT/8bd36fbacb593b0a133dc29678e6373c33bcd057/kord-rest-jvm-0.13.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.kord/kord-gateway-jvm/0.13.0-SNAPSHOT/1f1ffa0650c80be3a72b108fc58e7f70a61e967a/kord-gateway-jvm-0.13.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.pf4j/pf4j/3.10.0/6d8bf9dfbcb33eb8cfcee181f714de47de1774d8/pf4j-3.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.kord/kord-voice/0.13.0-SNAPSHOT/d1d8af38e4176cf05b75283b27ac698f4da0ca1a/kord-voice-0.13.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kotlindiscord.kord.extensions/annotations/1.7.1-SNAPSHOT/ac7c8fb5c9082f10c2028c4e304c45417a3dd1b1/annotations-1.7.1-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.kord.cache/cache-api-jvm/0.4.0/22cd2f5344a34279dc2b6b4820b8b4135d13dfb7/api-jvm-0.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-jvm/2.3.6/550659a94f8b9ce66c27cef5eddd599cd96443a8/ktor-http-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.sentry/sentry/6.33.1/c9de71259638a16672a89e3cb8a5ba374234df83/sentry-6.33.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.21/17ee3e873d439566c7d8354403b5f3d9744c4c9c/kotlin-stdlib-1.9.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-network-jvm/2.3.6/23ab56a7a6d3c6b1a32ccaf5a15ba8f9eda4916/ktor-network-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j/74.1/76698636a8b6ada58bf61ae57be748abe1f75840/icu4j-74.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-slf4j/1.7.3/34086fbfd556969d86b45ee2a69b816ee2413701/kotlinx-coroutines-slf4j-1.7.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.peanuuutz/tomlkt-jvm/0.2.0/5d40bf941fe6168258f9640018e44a8ffd2c39c0/tomlkt-jvm-0.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.kord/kord-core-jvm/0.13.0-SNAPSHOT/e82a75c2346fe305e9abcc7fd5cb65b0aa320c5d/kord-core-jvm-0.13.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-jvm/1.6.1/8f4df208edf91a3012e7a27ccd02f386d4bfc8c6/kotlinx-serialization-json-jvm-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-digester/commons-digester/2.1/73a8001e7a54a255eef0f03521ec1805dc738ca0/commons-digester-2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.kord/kord-common-jvm/0.13.0-SNAPSHOT/bd1686ba376700b0f1976d51a45a03d3de999c6e/kord-common-jvm-0.13.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.fellbaum/jemoji/1.3.2/c07a891a9d630f7cf395aa0029d5b95569bef5aa/jemoji-1.3.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.insert-koin/koin-core-jvm/3.5.0/1a9d0112ee949346edb5cbff25d31385be9e940a/koin-core-jvm-3.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kotlindiscord.kord.extensions/kord-extensions/1.7.1-SNAPSHOT/c1c21882761a15e77a471e63b097bd929e955171/kord-extensions-1.7.1-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-datetime-jvm/0.4.1/684eec210b21e2da7382a4aa85e56fb7b71f39b3/kotlinx-datetime-jvm-0.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-kotlinx-jvm/2.3.6/47e4ea3a98141a9ed916ab4d7d7b3a8718d69fe8/ktor-serialization-kotlinx-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/2.0.9/6367825de95d8885aae056afa793f25a76a84b7d/slf4j-simple-2.0.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.insert-koin/koin-logger-slf4j/3.5.0/b6050b7dcb9cd0abe88c9faa6bb3f249881da8a5/koin-logger-slf4j-3.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.zafarkhaja/java-semver/0.9.0/59a83ca73c72a5e25b3f0b1bb305230a11000329/java-semver-0.9.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.oshai/kotlin-logging-jvm/5.1.0/8bad1ee11168a914bd86b1a5ab4f7fadb7156d6a/kotlin-logging-jvm-5.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-kotlinx-json-jvm/2.3.6/237629e3cb28a2e768c2abd36aab97cfad2c4eb6/ktor-serialization-kotlinx-json-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.touchlab/stately-concurrency-jvm/2.0.0-rc1/f66f8d09a1e39918a73b8a840ae6c07774e2d2b3/stately-concurrency-jvm-2.0.0-rc1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-content-negotiation-jvm/2.3.6/5815595177b2f10feee0f1e4c5fcc04ca5307857/ktor-client-content-negotiation-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-validator/commons-validator/1.7/76069c915de3787f3ddd8726a56f47a95bfcbb0e/commons-validator-1.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.kord/kord-core-voice/0.13.0-SNAPSHOT/8175bad4f7ed5c94809d91ce681e651f3ddcf349/kord-core-voice-0.13.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm/1.6.1/986703783e1c8f07f0b66d86c9101d1e5aa5c71a/kotlinx-serialization-core-jvm-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.9/7cf2726fdcfbc8610f9a71fb3ed639871f315340/slf4j-api-2.0.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-jdk8/1.7.3/263611b87f7546402852e43a8dc7ef3223ada42a/kotlinx-coroutines-jdk8-1.7.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-jvm/2.3.6/578d35a2dcc790fa0fcfb2f88c9a7fce98483ae5/ktor-serialization-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-utils-jvm/2.3.6/5deb03c1ee8ba69b200951c27358e0b812cb073e/ktor-utils-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-cio-jvm/2.3.6/562d00ab9b583e2251b297095784c317a56b7a75/ktor-http-cio-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.touchlab/stately-concurrent-collections-jvm/2.0.0-rc1/9a82551bd69efae11997417730b788f18fce558b/stately-concurrent-collections-jvm-2.0.0-rc1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.15.2/9353b021f10c307c00328f52090de2bdb4b6ff9c/jackson-databind-2.15.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-websockets-jvm/2.3.6/2445e00903b2d5ff718d2204ae454ed169ea6a6c/ktor-websockets-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.4/d52b9abcd97f38c81342bb7e7ae1eee9b73cba51/commons-beanutils-1.9.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-network-tls-jvm/2.3.6/22b5e71709caf0681e6aa8eafc1ece19244b3ef8/ktor-network-tls-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-cio-jvm/2.3.6/ba3ad4432d7b3c09856b0178dca89b517f9a4cfd/ktor-client-cio-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-io-jvm/2.3.6/4b8aa5850072fa773ddd80104e5353e1325d2b6a/ktor-io-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.15.2/a6fe1836469a69b3ff66037c324d75fc66ef137c/jackson-core-2.15.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.7.3/2b09627576f0989a436a00a4a54b55fa5026fb86/kotlinx-coroutines-core-jvm-1.7.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.9.20/8b4b73f4e08efaae93fc01d8c6eaab58a72d2ab3/kotlin-stdlib-jdk7-1.9.20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.kord.cache/cache-map-jvm/0.4.0/b2bfaed6e71ecef3520b6e08462a34cfb2f086ee/map-jvm-0.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-events-jvm/2.3.6/7361b04c85d908d618848cf48851b92ece5e59ab/ktor-events-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.15.2/4724a65ac8e8d156a24898d50fd5dbd3642870b8/jackson-annotations-2.15.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-core-jvm/2.3.6/1d80e80aa69d0f01502aee14a8f3643ee5979caa/ktor-client-core-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kotlindiscord.kord.extensions/token-parser/1.7.1-SNAPSHOT/1e269fac8da3b2d639f52f551c3eea24d68dd524/token-parser-1.7.1-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-websockets-jvm/2.3.6/bbf964a2a3ad75af687a7cfa414ce654efb8c0b6/ktor-client-websockets-jvm-2.3.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.microutils/kotlin-logging-jvm/3.0.5/82f2256aeedccfd9c27ea585274a50bf06517383/kotlin-logging-jvm-3.0.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.touchlab/stately-strict-jvm/2.0.0-rc1/68880ea4f5cf177f8c50cd2ef6ed4a1a34e8b94d/stately-strict-jvm-2.0.0-rc1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
