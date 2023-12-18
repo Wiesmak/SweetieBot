@@ -1,10 +1,13 @@
 package pl.bronieskrakow.sweetiebot.models
 
+import dev.kord.common.entity.Snowflake
 import dev.kord.core.entity.Role
 import kotlinx.datetime.Instant
+import org.bson.types.ObjectId
 import kotlin.time.Duration
 
 data class Event(
+    val id: ObjectId,
     val name: String,
     val date: String?,
     val startDate: Instant,
@@ -15,6 +18,7 @@ data class Event(
     val tickets: String?,
     val hosts: String?,
     val link: String?,
+    var roleId: Snowflake?,
 ) {
     companion object {
         fun dateFormString(date: String, time: String): Pair<Instant, Instant> {
@@ -64,9 +68,10 @@ data class Event(
         }
     }
 
-    fun generateMessage(role: Role): String {
+    fun generateMessage(fallbackRole: Role?): String {
+        val roleBlock = if (roleId == null && fallbackRole == null) "" else if (roleId != null) "<@&${roleId!!.value}>" else fallbackRole?.mention
         return """
-            :blue_heart: Wydarzenie: **${name}** <@&${role.id.value}>
+            :blue_heart: Wydarzenie: **${name}** $roleBlock
             
             :calendar_spiral: Data: **${date ?: "brak danych"}**
             
