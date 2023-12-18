@@ -1,4 +1,4 @@
-package pl.bronieskrakow.sweetiebot.repositories
+package pl.bronieskrakow.sweetiebot.repositories.event
 
 import com.kotlindiscord.kord.extensions.adapters.mongodb.kordExCodecRegistry
 import com.mongodb.MongoClientSettings
@@ -8,8 +8,7 @@ import dev.kord.core.entity.Role
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.toList
 import org.bson.codecs.configuration.CodecRegistries
-import pl.bronieskrakow.sweetiebot.models.Event
-import java.util.*
+import pl.bronieskrakow.sweetiebot.repositories.event.models.Event
 
 class MongoEventRepository(private val database: MongoDatabase) : EventRepository {
     private val registry = CodecRegistries.fromRegistries(

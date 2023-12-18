@@ -1,7 +1,7 @@
-package pl.bronieskrakow.sweetiebot.repositories
+package pl.bronieskrakow.sweetiebot.repositories.event
 
 import dev.kord.core.entity.Role
-import pl.bronieskrakow.sweetiebot.models.Event
+import pl.bronieskrakow.sweetiebot.repositories.event.models.Event
 
 interface EventRepository {
     suspend fun listEvents(): List<Event>

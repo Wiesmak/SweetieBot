@@ -2,13 +2,11 @@ package pl.bronieskrakow.sweetiebot
 
 import com.kotlindiscord.kord.extensions.ExtensibleBot
 import com.kotlindiscord.kord.extensions.adapters.mongodb.mongoDB
-import com.kotlindiscord.kord.extensions.adapters.mongodb.kordExCodecRegistry
 import com.kotlindiscord.kord.extensions.utils.env
 import com.mongodb.kotlin.client.coroutine.MongoClient
 import pl.bronieskrakow.sweetiebot.extensions.*
-import pl.bronieskrakow.sweetiebot.repositories.EventRepository
-import pl.bronieskrakow.sweetiebot.repositories.MongoEventRepository
-import java.util.Objects
+import pl.bronieskrakow.sweetiebot.repositories.event.EventRepository
+import pl.bronieskrakow.sweetiebot.repositories.event.MongoEventRepository
 
 private val TOKEN = env("TOKEN")
 private val MONGODB_URI = env("ADAPTER_MONGODB_URI")

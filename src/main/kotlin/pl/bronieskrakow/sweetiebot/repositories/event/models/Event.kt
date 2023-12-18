@@ -1,4 +1,4 @@
-package pl.bronieskrakow.sweetiebot.models
+package pl.bronieskrakow.sweetiebot.repositories.event.models
 
 import dev.kord.common.entity.Snowflake
 import dev.kord.core.entity.Role
@@ -8,6 +8,7 @@ import kotlin.time.Duration
 
 data class Event(
     val id: ObjectId,
+    val state: EventState,
     val name: String,
     val date: String?,
     val startDate: Instant,

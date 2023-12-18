@@ -13,7 +13,6 @@ import com.kotlindiscord.kord.extensions.extensions.Extension
 import com.kotlindiscord.kord.extensions.extensions.event
 import com.kotlindiscord.kord.extensions.extensions.publicSlashCommand
 import com.kotlindiscord.kord.extensions.utils.hasRole
-import dev.kord.common.Color
 import dev.kord.common.entity.*
 import dev.kord.common.entity.optional.Optional
 import dev.kord.core.behavior.RoleBehavior
@@ -25,8 +24,9 @@ import dev.kord.core.event.interaction.ButtonInteractionCreateEvent
 import dev.kord.rest.builder.message.actionRow
 import dev.kord.rest.builder.message.embed
 import org.bson.types.ObjectId
-import pl.bronieskrakow.sweetiebot.models.Event
-import pl.bronieskrakow.sweetiebot.repositories.EventRepository
+import pl.bronieskrakow.sweetiebot.repositories.event.EventRepository
+import pl.bronieskrakow.sweetiebot.repositories.event.models.Event
+import pl.bronieskrakow.sweetiebot.repositories.event.models.EventState
 
 class EventExtension(private val eventRepository: EventRepository) : Extension() {
     override val name = "event"
@@ -61,6 +61,7 @@ class EventExtension(private val eventRepository: EventRepository) : Extension()
                     // create event object
                     val myEvent = Event(
                         id = ObjectId(),
+                        state = EventState.UPCOMING,
                         name = modal.name.value ?: "???",
                         date = dateHour?.split(" | ")?.get(0),
                         startDate = Event.dateFormString(dateHour?.split(" | ")?.get(0) ?: "11.09.2030", dateHour?.split(" | ")?.get(1) ?: "00:00").first,
