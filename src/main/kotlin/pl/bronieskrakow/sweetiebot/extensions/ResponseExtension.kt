@@ -10,7 +10,7 @@ class ResponseExtension : Extension() {
     private val triggerResponse: Map<String, String> = mapOf(
         "luna" to "Luna eats oats! <:1185611903561633984:1185611903561633984>",
         "celestia" to "<:646373519357116416:646373519357116416> The Solar Empire, towards a brighter future! <:646373519357116416:646373519357116416>",
-        "rarity" to "White pony best pony. <:569909529815285770:569909529815285770>",
+        "rarity" to "White pony best pony. <a:569909529815285770:569909529815285770>",
     )
 
     override suspend fun setup() {

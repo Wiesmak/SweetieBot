@@ -15,7 +15,8 @@ import dev.kord.common.entity.InteractionType
 import dev.kord.common.entity.Snowflake
 import dev.kord.core.behavior.channel.MessageChannelBehavior
 import dev.kord.core.behavior.createRole
-import dev.kord.core.event.interaction.InteractionCreateEvent
+import dev.kord.core.behavior.interaction.respondEphemeral
+import dev.kord.core.event.interaction.ButtonInteractionCreateEvent
 import dev.kord.rest.builder.message.actionRow
 
 class EventExtension : Extension() {
@@ -106,9 +107,6 @@ class EventExtension : Extension() {
                                 style = ButtonStyle.Primary
                             ) {
                                 label = "Jadę na ${event["name"]}!"
-
-                                // add role to user on button click
-
                             }
                         }
                     }
@@ -116,7 +114,7 @@ class EventExtension : Extension() {
             }
         }
 
-        event<InteractionCreateEvent> {
+        event<ButtonInteractionCreateEvent> {
             action {
                 // return if not button
                 if (event.interaction.type != InteractionType.Component) return@action
@@ -126,6 +124,10 @@ class EventExtension : Extension() {
 
                 // add role to user
                 event.interaction.user.asMember(event.interaction.data.guildId.value!!).addRole(Snowflake(roleId!!))
+
+                event.interaction.respondEphemeral {
+                    content = "Dodano rolę!"
+                }
             }
         }
     }

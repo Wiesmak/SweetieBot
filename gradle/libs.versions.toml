@@ -2,10 +2,16 @@
 kotlin = "1.9.21"
 
 kord-extensions = "1.7.1-SNAPSHOT"
+adapter-mongodb = "1.7.1-SNAPSHOT"
+kotlinx-coroutines = "1.8.0-RC"
+mongodb-driver = "4.11.1"
 slf4j = "2.0.9"
 
 [libraries]
 kord-extensions = { module = "com.kotlindiscord.kord.extensions:kord-extensions", version.ref = "kord-extensions" }
+adapter-mongodb = { module ="com.kotlindiscord.kord.extensions:adapter-mongodb", version.ref = "adapter-mongodb" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+mongodb-driver = { module = "org.mongodb:mongodb-driver-kotlin-coroutine", version.ref = "mongodb-driver" }
 
 slf4j = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }

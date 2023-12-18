@@ -31,6 +31,9 @@ repositories {
 dependencies {
     implementation(libs.kotlin.stdlib)
     implementation(libs.kord.extensions)
+    implementation(libs.adapter.mongodb)
+    implementation(libs.kotlinx.coroutines)
+    implementation(libs.mongodb.driver)
     implementation(libs.slf4j)
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
