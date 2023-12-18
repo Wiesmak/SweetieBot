@@ -10,14 +10,16 @@ import com.kotlindiscord.kord.extensions.extensions.Extension
 import com.kotlindiscord.kord.extensions.extensions.event
 import com.kotlindiscord.kord.extensions.extensions.publicSlashCommand
 import dev.kord.common.Color
-import dev.kord.common.entity.ButtonStyle
-import dev.kord.common.entity.InteractionType
-import dev.kord.common.entity.Snowflake
+import dev.kord.common.entity.*
+import dev.kord.common.entity.optional.Optional
 import dev.kord.core.behavior.channel.MessageChannelBehavior
 import dev.kord.core.behavior.createRole
+import dev.kord.core.behavior.createScheduledEvent
 import dev.kord.core.behavior.interaction.respondEphemeral
 import dev.kord.core.event.interaction.ButtonInteractionCreateEvent
 import dev.kord.rest.builder.message.actionRow
+import kotlinx.datetime.Clock
+import pl.bronieskrakow.sweetiebot.models.Event
 
 class EventExtension : Extension() {
     override val name = "event"
@@ -37,24 +39,30 @@ class EventExtension : Extension() {
                     return@action
                 }
 
+                // get date and hour
                 val dateHour = if ((modal.date.value ?: "brak danych").contains(" | ") && (modal.date.value ?: "brak danych").split(" | ").size >= 2)
                     modal.date.value
                     else modal.date.value + " | brak danych"
 
-                // get event data
-                val event: Map<String, String?> = mapOf(
-                    "name" to modal.name.value,
-                    "date" to dateHour?.split(" | ")?.get(0),
-                    "place" to modal.place.value,
-                    "hour" to dateHour?.split(" | ")?.get(1),
-                    "type" to arguments.type,
-                    "tickets" to modal.tickets.value,
-                    "hosts" to arguments.hosts.parsed,
-                    "link" to modal.link.value,
+
+
+                // create event object
+                val myEvent: Event = Event(
+                    modal.name.value ?: "???",
+                    dateHour?.split(" | ")?.get(0),
+                    Event.dateFormString(dateHour?.split(" | ")?.get(0) ?: "11.09.2030", dateHour?.split(" | ")?.get(1) ?: "00:00").first,
+                    Event.dateFormString(dateHour?.split(" | ")?.get(0) ?: "11.09.2030", dateHour?.split(" | ")?.get(1) ?: "00:00").second,
+                    modal.place.value,
+                    dateHour?.split(" | ")?.get(1),
+                    arguments.type,
+                    modal.tickets.value,
+                    arguments.hosts.parsed,
+                    modal.link.value,
                 )
 
-                // Build role name
-                val roleName = event["name"]?.replace(Regex("([0-9]| )+$"), "") + " '" + event["date"]?.split(".")?.get(2)?.substring(2)
+                // build messages
+                val roleName = myEvent.generateRoleName()
+                val assignMessage = myEvent.generateAssignMessage()
 
                 // create role
                 val role = guild?.createRole {
@@ -64,38 +72,26 @@ class EventExtension : Extension() {
                 }
 
                 // build message
-                val message = """
-                    :blue_heart: Wydarzenie: **${event["name"] ?: "???"}** <@&${role?.id?.value.toString()}>
-                    
-                    :calendar_spiral: Data: **${event["date"] ?: "brak danych"}**
-                    
-                    :pushpin: Miejsce: ${event["place"] ?: "brak danych"}
-                    
-                    :clock2: Godzina: ${event["hour"] ?: "brak danych"}
-                    
-                    :gear: Typ: ${event["type"] ?: "brak danych"}
-                    
-                    :tickets: Bilety: ${event["tickets"] ?: "brak danych"}
-                    
-                    :construction: Organizatorzy: ${event["hosts"] ?: "brak danych"}
-                    
-                    ${if (event["link"] != null) ":link: Link do wydarzenia: ${event["link"]}" else ""}
-                    
-                """.trimIndent()
+                val message = myEvent.generateMessage(role!!)
 
                 // send message to events channel
                 MessageChannelBehavior(arguments.eventsChannel.id, arguments.eventsChannel.kord).createMessage(message)
 
-                // build message for event assign channel
-                val assignMessage = """
-                    Wybierasz się na **${event["name"] ?: "???"}**?
-                    
-                    Naciśnij przycisk poniżej, aby otrzymać dostęp do sekcji związanej z tym wydarzeniem!
-                    
-                    Aby utrzymać rolę wyślij w trakcie meeta albo po nim swój identyfikator na kanale pokaż swoje id :)
-                    
-                    Do zobaczenia na meecie!
-                """.trimIndent()
+                // create discord event
+                guild?.createScheduledEvent(
+                    name = myEvent.name,
+                    privacyLevel = GuildScheduledEventPrivacyLevel.GuildOnly,
+                    scheduledStartTime = myEvent.startDate,
+                    entityType = ScheduledEntityType.External,
+                ) {
+                    name = myEvent.name
+                    privacyLevel = GuildScheduledEventPrivacyLevel.GuildOnly
+                    scheduledStartTime = myEvent.startDate
+                    scheduledEndTime = myEvent.endDate
+                    description = myEvent.generateMessage(role)
+                    entityType = ScheduledEntityType.External
+                    entityMetadata = GuildScheduledEventEntityMetadata(Optional(myEvent.place ?: "brak danych"))
+                }
 
                 // send message with a button
                 respond {
@@ -103,10 +99,10 @@ class EventExtension : Extension() {
                     components {
                         actionRow {
                             interactionButton(
-                                customId = "join-event-${role?.id?.value.toString()}",
+                                customId = "join-event-${role.id.value}",
                                 style = ButtonStyle.Primary
                             ) {
-                                label = "Jadę na ${event["name"]}!"
+                                label = "Jadę na ${myEvent.name}!"
                             }
                         }
                     }
