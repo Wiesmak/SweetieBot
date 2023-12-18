@@ -4,6 +4,7 @@ import com.kotlindiscord.kord.extensions.commands.Arguments
 import com.kotlindiscord.kord.extensions.commands.application.slash.converters.impl.stringChoice
 import com.kotlindiscord.kord.extensions.commands.application.slash.publicSubCommand
 import com.kotlindiscord.kord.extensions.commands.converters.impl.channel
+import com.kotlindiscord.kord.extensions.commands.converters.impl.color
 import com.kotlindiscord.kord.extensions.commands.converters.impl.role
 import com.kotlindiscord.kord.extensions.commands.converters.impl.string
 import com.kotlindiscord.kord.extensions.components.components
@@ -80,7 +81,7 @@ class EventExtension(private val eventRepository: EventRepository) : Extension()
                     // create role
                     val role = guild?.createRole {
                         name = roleName
-                        color = Color(0x000000)
+                        color = arguments.color.parsed
                         mentionable = true
                     }
 
@@ -253,6 +254,11 @@ class EventExtension(private val eventRepository: EventRepository) : Extension()
         val hosts = string {
             name = "hosts"
             description = "Organizatorzy"
+        }
+
+        val color = color {
+            name = "color"
+            description = "Kolor roli"
         }
     }
 
